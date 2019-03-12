@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digimon RPG</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=VT323|ZCOOL+QingKe+HuangYou" rel="stylesheet">
+    <!-- Personal CSS -->
+    <link rel="stylesheet" href="./assets/CSS/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Page header -->
+        <div class="jumbotron text-center" id="header">
+            <h1>DIGIMON BATTLE.</h1>
+        </div>
+
+        <!-- Character cards -->
+        <div class="row">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">Choose your Character</h4>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+
+                        <div class="col-md-3 character" data-name="gatomon" data-power="5" data-hp="150">
+                                <!-- <a href="#" onclick="gameManager.setGameStart('gatomon')"> -->
+                            <div class="card characters">
+                                <img class="card-img-top" src="./assets/images/player/Gatomon.gif" alt="Card image cap">
+                                <div class="card-body">
+                                    <h4 class="card-title" id="characterSelect">Gatomon</h4>
+                                    <p class="card-text">HP: <span id="hp">150</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End of first col-md-3 card section -->
+
+                        <div class="col-md-3 character" data-name="patamon" data-power="6" data-hp="130">
+                                <!-- <a href="#" onclick="gameManager.setGameStart('patamon')"> -->
+                            <div class="card characters">
+                                <img class="card-img-top" src="./assets/images/player/patamon.gif" alt="Card image cap">
+                                <div class="card-body">
+                                    <h4 class="card-title" id="characterSelect">Patamon</h4>
+                                    <p class="card-text">HP: <span id="hp">130</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End of second col-md-3 card section -->
+
+                        <div class="col-md-3 character" data-name="renamon" data-power="7" data-hp="200">
+                                <!-- <a href="#" onclick="gameManager.setGameStart('renamon')"> -->
+                            <div class="card characters">
+                                <img class="card-img-top" src="./assets/images/player/Renamon.gif" alt="Card image cap">
+                                <div class="card-body">
+                                    <h4 class="card-title" id="characterSelect">Renamon</h4>
+                                    <p class="card-text">HP: <span id="hp">200</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End of third col-md-3 card section -->
+
+                        <div class="col-md-3 character" data-name="terriermon" data-power="8" data-hp="210">
+                                <!-- <a href="#" onclick="gameManager.setGameStart('terriermon')"> -->
+                            <div class="card characters">
+                                <img class="card-img-top" src="./assets/images/player/Terriermon.gif" alt="Card image cap">
+                                <div class="card-body">
+                                    <h4 class="card-title" id="characterSelect">Terriermon</h4>
+                                    <p class="card-text">HP: <span id="hp">210</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End of fourth col-md-3 card section -->
+                    </div>
+                    <!-- End of row -->
+                </div>
+                <!-- End of card body -->
+            </div>
+            <!-- End of card -->
+        </div>
+        <!-- End of row -->
+
+        <!-- Your current character -->
+        <section id="game-area">
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-4">
+                    <!-- Building empty character card -->
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title">Your Digimon</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="row" id="your-character">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title">Defender</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="row" id="the-defender">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End of game-area: Character/Battler Section -->
+
+        <!-- Attack button information section -->
+        <section id="attack-button">
+            <div class="row">
+                <div class="col-sm-3"></div>
+                <div class="col-sm-6">
+                    <div class="alert alert-danger" id="attack-dialogue" role="alert">
+                    </div>
+                </div>
+            </div>
+
+            <!-- The attack button -->
+            <div class="row text-center" id="fight-btn">
+                <div class="col-sm-3"></div>
+                <div class="col-sm-6">
+                    <button type="button" class="btn btn-danger btn-lg btn-block">ATTACK</button>
+                </div>
+            </div>
+        </section>
+        <!-- End of attack button section -->
+
+        <!-- Enemies available for attack once you choose your character -->
+        <section id="game-area">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title">Available Battlers</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="row" id="available-enemies">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End of enemies that moved to game-area -->
+    </div>
+    <!-- End of our container -->
+    <!-- jQuery  -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+   <!-- Game JavaScript -->
+    <script src="./assets/javascript/game.js"></script>
+</body>
+</html>
